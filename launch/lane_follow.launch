@@ -26,6 +26,12 @@
   <param name = "imgtopic_name" type = "str" value = "/camera/image_raw" />
   </node>
 
+  <!--  
+  <node pkg="spring_line_pkg" name="line_follow_try" type="line_follow_try.py" required="true" output="screen" >
+  <param name = "imgtopic_name" type = "str" value = "/camera/image_raw" />
+  </node>
+  -->
+  
   <!-- launch the line follow node -->
   <node pkg="spring_line_pkg" name="line_follow" type="line_follow.py" required="true" output="screen" >
   <param name = "imgtopic_name" type = "str" value = "/camera/image_raw" />
