@@ -1,1 +1,2 @@
+# ignore the __pycache__ directory
 ./scripts/spring/__pycache__
