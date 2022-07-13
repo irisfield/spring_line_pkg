@@ -20,7 +20,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 generate_dynamic_reconfigure_options(
   cfg/Blob.cfg
-  # cfg/LineFollow.cfg
   cfg/ControlUnit.cfg
   cfg/YellowLine.cfg
 )
