@@ -8,21 +8,21 @@ project(spring_line_pkg)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  rospy
+  roscpp
+  std_msgs
   cv_bridge
+  sensor_msgs
+  geometry_msgs
   dbw_polaris_msgs
   dynamic_reconfigure
-  geometry_msgs
-  roscpp
-  rospy
-  sensor_msgs
-  std_msgs
 )
 
 generate_dynamic_reconfigure_options(
-  cfg/LineFollow.cfg
-  cfg/ControlUnit.cfg
-  cfg/DetectYellow.cfg
   cfg/Blob.cfg
+  # cfg/LineFollow.cfg
+  cfg/ControlUnit.cfg
+  cfg/YellowLine.cfg
 )
 
 ## System dependencies are found with CMake's conventions

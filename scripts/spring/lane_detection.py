@@ -2,7 +2,7 @@ from numpy import ndarray
 import cv2 as cv
 import numpy as np
 from utils import cols, rows
-from spring_line_sim.cfg import BlobConfig
+from spring_line_pkg.cfg import BlobConfig
 
 
 def compute_lines(self, config:BlobConfig, image:ndarray) -> ndarray:
@@ -16,7 +16,7 @@ def compute_lines(self, config:BlobConfig, image:ndarray) -> ndarray:
         canny_image = cv.Canny(gray_image, 200,255)
 
         image_cropped = canny_image[y:y+h, x:x+w]
-        
+
         lines = cv.HoughLinesP(image_cropped,
                                rho=config.lines_rho,
                                theta=0.01745329251,
@@ -55,7 +55,7 @@ def compute_lines(self, config:BlobConfig, image:ndarray) -> ndarray:
 #                config: BlobConfig,
 #                debug_image: ndarray=None) -> ndarray:
 #     """
-#     This algorithm uses light-on-dark contrast to find 
+#     This algorithm uses light-on-dark contrast to find
 #     lane lines. If lanes do not have this property, another
 #     lane-finding algorithm may be used instead
 #     """
